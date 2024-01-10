@@ -1,0 +1,32 @@
+{
+  "name": "food-app",
+  "version": "1.0.0",
+  "description": "food react app",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inikhilgarg/Foodie.git"
+  },
+  "author": "Nikhil Garg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inikhilgarg/Foodie/issues"
+  },
+  "homepage": "https://github.com/inikhilgarg/Foodie#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "maintained node versions"
+  ]
+}
