@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header=()=>{
     const [login,setLogin]=useState(false)
@@ -9,10 +10,10 @@ const Header=()=>{
             </div>
             <div className="nav-items">
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
+                    <li><Link to={"./"}>Home</Link></li>
+                    <li><Link to={"./About"}>About Us</Link></li>
+                    <li><Link to={"./Contact"}>Contact Us</Link></li>
+                    <li><Link to={"./Cart"}>Cart</Link></li>
                     <li><button onClick={()=>{setLogin((prev)=>!prev)}} style={{cursor:"pointer"}}>{login?"Login":"Logout"}</button></li>
                 </ul>
             </div>

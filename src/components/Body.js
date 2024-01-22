@@ -1,18 +1,19 @@
 import RestuarantCard from "./RestuarantCard";
 import { useEffect, useState } from "react";
 import Shimmer  from "./Shimmer"
+import { Link } from "react-router-dom";
 
 
 const Body=()=>{
-    const [res,setRes]=useState([])
+    const [res,setRes]=useState(null)
     const [filter,setFilter]=useState([])
     const [search,setSearch]=useState("")
 
     const fetchData=async()=>{
         const data= await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=28.4089123&lng=77.3177894")
         const jsonData=await data.json();
-        console.log(jsonData?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle?.restaurants)
-        const resData=jsonData?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle?.restaurants;
+        console.log(jsonData?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants)
+        const resData=jsonData?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants;
         setRes(resData)
         setFilter(resData)
     }
@@ -21,7 +22,7 @@ const Body=()=>{
         fetchData();
     },[])
     console.log("Body rendered")
-    if(res.length===0) return <Shimmer/>
+    if(res==null) return <Shimmer/>
     
     return(    
         <div className="body-container">
@@ -40,7 +41,7 @@ const Body=()=>{
             </div>
             <div className="res-container">
                 {
-                    filter.map((e)=><RestuarantCard key={e.info.id} resObj={e}/>)
+                    filter.map((e)=><Link key={e.info.id} to={"restuarants/"+e.info.id}><RestuarantCard resObj={e}/></Link>)
                 }
             </div>
         </div>
