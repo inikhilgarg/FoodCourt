@@ -26,21 +26,21 @@ const Body=()=>{
     if(res==null) return <Shimmer/>
     
     return(    
-        <div className="body-container">
-            <div className="search-container">
-                <input type="text" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
-                <button onClick={()=>{
+        <div>
+            <div className="flex gap-4 m-4">
+                <input className="border border-black rounded-md" placeholder="Search" type="text" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
+                <button className="text-white bg-blue-600 px-3" onClick={()=>{
                     setFilter(res.filter((e)=>e.info.name.toLowerCase().includes(search.toLowerCase())))
                     
                 }}>Search</button>
-                <button onClick={()=>{
+                <button className="text-white bg-orange-600 px-3" onClick={()=>{
                     setFilter((prev)=>{
                         let n = prev.filter((e)=> e.info.avgRating>4.0)
                         return n
                     })
                 }}>Top rated Restaurants</button>
             </div>
-            <div className="res-container">
+            <div className="res-container flex gap-4 flex-wrap m-4">
                 {
                     filter.map((e)=><Link key={e.info.id} to={"restuarants/"+e.info.id}><RestuarantCard resObj={e}/></Link>)
                 }

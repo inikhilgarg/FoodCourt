@@ -8,17 +8,15 @@ const RestuarantMenu=()=>{
     console.log("Body rendered")
     
     if(menu===null) return <Shimmer/>;
-    // console.log(menu?.data?.cards[2]?.card?.card?.info);
     const {name,cuisines,costForTwoMessage}=menu?.data?.cards[2]?.card?.card?.info
     const {itemCards}=menu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
-    // console.log(itemCards)
     return (
         <div>
-            <h1>{name}</h1>
+            <h1 className="text-2xl font-bold">{name}</h1>
             <p>{cuisines.join(', ')} - {costForTwoMessage}</p>
-            <h3>Menu:</h3>
+            <h3 className="text-xl font-bold">Menu:</h3>
             <ul>
-                {itemCards.map((e)=><li key={e.card.info.id}>{e.card.info.name}- Rs:-{e.card.info.price/100}</li>
+                {itemCards.map((e)=><div className=""><li key={e.card.info.id}>{e.card.info.name}- Rs:-{e.card.info.price/100}</li></div>
                 )}
             </ul>
         </div>

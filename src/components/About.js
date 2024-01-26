@@ -23,7 +23,6 @@ class About extends React.Component{
         console.log("Parent render")
         return (
             <div>
-                <h1>Kya janna hai </h1>
                 <UserClass name="Nikhil garg" location="Faridabad" email="nikhilgarg@gmail.com"/>
                 {/* <UserClass name="garg" location="Faridabad" email="nikhilgarg@gmail.com"/> */}
             </div>
