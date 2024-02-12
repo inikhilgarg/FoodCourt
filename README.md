@@ -1,4 +1,4 @@
-- I made [🚀 food-app ](https://65c9f446796107cbfb4d09cd--fastidious-pothos-3e1396.netlify.app/) using React.js and Parcel.js
+- I made [🚀 food-app ]([https://65c9f446796107cbfb4d09cd--fastidious-pothos-3e1396.netlify.app/](https://65c9f93d37cc55cce4320b0a--euphonious-truffle-ff3bc0.netlify.app/)) using React.js and Parcel.js
 
 
 
