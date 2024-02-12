@@ -1,4 +1,4 @@
-- I made [🚀 food-app 😍]from scratch using React.js and Parcel.js
+- I made [🚀 food-app (https://65c9f446796107cbfb4d09cd--fastidious-pothos-3e1396.netlify.app/)😍]from scratch using React.js and Parcel.js
 
 
 
